@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NC Elite Darkhorses — What's Inside Each Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e8202a' d='M5 21c0-6 4-10 9-10l5-4-1 4 2 1-3 2c1 4-2 8-7 8z'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f4f2f3; --card:#ffffff; --card-2:#faf9fa; --ink:#161315; --muted:#615a5f; --muted-2:#938b90;
+  --line:rgba(18,12,14,.12); --line-2:rgba(18,12,14,.2);
+  --red:#e8202a; --red-2:#ff3b45; --red-soft:rgba(232,32,42,.10); --red-deep:#b3141d;
+  --coach:#e8202a; --coach-bg:rgba(232,32,42,.11);
+  --parent:#2f5d92; --parent-bg:rgba(47,93,146,.12);
+  --mom:#b5650a; --mom-bg:rgba(181,101,10,.13);
+  --green:#1f9d57; --green-bg:rgba(31,157,87,.13);
+  --r:14px; --maxw:1180px;
+  --shadow:0 18px 44px -24px rgba(20,12,14,.22);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Hanken Grotesk",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:38px}
+h1,h2,h3,.display{font-family:"Anton",Impact,system-ui,sans-serif;font-weight:400;letter-spacing:.012em;line-height:.96;text-transform:uppercase;margin:0}
+img,svg{display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.eyebrow{font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+.muted{color:var(--muted)}
+
+/* stripe */
+.stripe{height:5px;background:repeating-linear-gradient(90deg,var(--red) 0 38px,#15110f 38px 46px)}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.85);backdrop-filter:blur(11px);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:13px;height:62px;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.mk{width:38px;height:38px;border-radius:10px;border:1.5px solid var(--line-2);background:radial-gradient(120% 120% at 30% 20%,rgba(232,32,42,.28),transparent 60%),var(--card);display:grid;place-items:center;flex:0 0 auto}
+.mk svg{width:24px;height:24px;color:var(--red)}
+.brand .b1{font-family:"Anton";font-size:16px;letter-spacing:.02em;line-height:1}
+.brand .b2{font-size:9px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.head-tag{margin-left:auto;font-size:12px;font-weight:700;color:var(--muted);border:1px solid var(--line);padding:7px 13px;border-radius:99px}
+
+/* hero */
+.hero{position:relative;padding:64px 0 38px;
+  background:radial-gradient(120% 80% at 88% -20%,rgba(232,32,42,.12),transparent 55%),
+  linear-gradient(180deg,#fff,var(--bg))}
+.hero .chip{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:12px;letter-spacing:.05em;text-transform:uppercase;
+  background:var(--red-soft);border:1px solid rgba(232,32,42,.3);color:var(--red);padding:7px 14px;border-radius:99px;margin-bottom:18px}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(34px,6.4vw,68px);max-width:16ch}
+.hero h1 .hl{color:var(--red)}
+.hero p.sub{margin-top:18px;font-size:clamp(17px,2vw,21px);color:#4a444a;max-width:60ch;font-weight:500}
+
+/* role legend */
+.legend{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px;align-items:stretch}
+.lg-card{flex:1 1 220px;border:1px solid var(--line);border-radius:13px;background:var(--card);padding:15px 17px;display:flex;gap:13px;align-items:flex-start;box-shadow:var(--shadow)}
+.lg-card .lic{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;flex:0 0 auto}
+.lg-card .lic svg{width:22px;height:22px}
+.lg-card.coach .lic{background:var(--coach-bg);color:var(--coach)}
+.lg-card.parent .lic{background:var(--parent-bg);color:var(--parent)}
+.lg-card.mom .lic{background:var(--mom-bg);color:var(--mom)}
+.lg-card .lt{font-family:"Anton";font-size:18px;line-height:1}
+.lg-card.coach .lt{color:var(--coach)}
+.lg-card.parent .lt{color:var(--parent)}
+.lg-card.mom .lt{color:var(--mom)}
+.lg-card .ld{font-size:13px;color:var(--muted);margin-top:3px}
+
+/* section frame */
+section{padding:54px 0;position:relative}
+.sec-head{margin-bottom:30px}
+.sec-head h2{font-size:clamp(26px,4.2vw,44px);max-width:20ch}
+.sec-head p{margin-top:12px;font-size:17px;color:var(--muted);max-width:64ch}
+
+/* role chips (on tiles) */
+.roles{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.role{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px 3px 7px;border-radius:99px;line-height:1.4}
+.role::before{content:"";width:7px;height:7px;border-radius:99px;flex:0 0 auto}
+.role.coach{color:var(--coach);background:var(--coach-bg)} .role.coach::before{background:var(--coach)}
+.role.parent{color:var(--parent);background:var(--parent-bg)} .role.parent::before{background:var(--parent)}
+.role.mom{color:var(--mom);background:var(--mom-bg)} .role.mom::before{background:var(--mom)}
+
+/* ===== plan comparison ===== */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+@media(max-width:900px){.compare{grid-template-columns:1fr;gap:26px}}
+.plan{border:1px solid var(--line);border-radius:18px;background:var(--card);overflow:hidden;box-shadow:var(--shadow)}
+.plan.feat{border-color:var(--red);box-shadow:0 22px 50px -26px rgba(232,32,42,.4)}
+.plan-head{padding:24px 24px 22px;border-bottom:1px solid var(--line);position:relative;background:linear-gradient(180deg,var(--card-2),var(--card))}
+.plan.feat .plan-head{background:linear-gradient(180deg,rgba(232,32,42,.07),var(--card))}
+.plan .badge{position:absolute;top:16px;right:16px;font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#fff;background:var(--red);padding:5px 11px;border-radius:99px}
+.plan .pname{font-family:"Anton";font-size:clamp(24px,3.4vw,32px);line-height:1;padding-right:96px}
+@media(max-width:560px){
+  .plan .badge{position:static;display:inline-block;margin-bottom:11px}
+  .plan .pname{padding-right:0}
+}
+.plan .promise{font-size:14.5px;color:var(--muted);margin-top:8px;max-width:34ch}
+.plan .price{display:flex;align-items:baseline;gap:9px;margin-top:16px;flex-wrap:wrap}
+.plan .price .big{font-family:"Anton";font-size:34px;color:var(--ink)}
+.plan.feat .price .big{color:var(--red)}
+.plan .price .per{font-size:13px;color:var(--muted);font-weight:600}
+.plan .price .mo{font-size:13px;font-weight:700;color:var(--ink);background:rgba(18,12,14,.05);padding:4px 10px;border-radius:8px}
+.plan .pages-h{font-size:11.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--muted-2);padding:18px 24px 4px;display:flex;justify-content:space-between;align-items:center}
+.plan .pages-h .cnt{color:var(--red);font-family:"Anton";font-size:15px;letter-spacing:.02em}
+.tiles{padding:6px 16px 20px;display:flex;flex-direction:column;gap:10px}
+.tile{display:flex;gap:13px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--card);transition:border-color .2s var(--ease),transform .2s var(--ease)}
+.tile:hover{border-color:var(--line-2);transform:translateY(-2px)}
+.tile.new{background:linear-gradient(180deg,rgba(232,32,42,.055),var(--card));border-color:rgba(232,32,42,.28)}
+.tile.carry{background:var(--card-2);border-style:dashed}
+.tile .tic{width:42px;height:42px;border-radius:11px;background:var(--bg);border:1px solid var(--line);display:grid;place-items:center;flex:0 0 auto;color:var(--ink)}
+.tile.new .tic{background:var(--red-soft);border-color:rgba(232,32,42,.25);color:var(--red)}
+.tile .tic svg{width:23px;height:23px}
+.tile .tn{font-weight:800;font-size:15.5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tile .tn .tag-new{font-size:9px;font-weight:800;letter-spacing:.08em;color:#fff;background:var(--red);padding:2px 7px;border-radius:5px}
+.tile .td{font-size:13px;color:var(--muted);margin-top:3px}
+.tile .pn{font-family:"Anton";font-size:12px;color:var(--muted-2);align-self:flex-start}
+
+/* ===== engine band ===== */
+.engine-band{background:linear-gradient(180deg,#15110f,#241d1f);color:#f4f2f3}
+.engine-band .eyebrow{color:var(--red-2)}
+.engine-band .sec-head h2{color:#fff}
+.engine-band .sec-head p{color:#c7c0c4}
+.flow{display:flex;align-items:stretch;gap:0;margin:6px 0 38px;flex-wrap:wrap}
+.flow .step{flex:1 1 150px;min-width:140px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:13px;padding:18px 15px;text-align:center;position:relative}
+.flow .step .si{width:46px;height:46px;border-radius:12px;margin:0 auto 11px;display:grid;place-items:center;background:rgba(232,32,42,.16);color:var(--red-2)}
+.flow .step .si svg{width:25px;height:25px}
+.flow .step .sn{font-weight:800;font-size:14px;color:#fff}
+.flow .step .sd{font-size:12px;color:#b7b0b4;margin-top:4px}
+.flow .arrow{display:grid;place-items:center;width:30px;color:var(--red-2);flex:0 0 auto}
+.flow .arrow svg{width:22px;height:22px}
+@media(max-width:760px){
+  .flow{flex-direction:column}
+  .flow .step{flex:1 1 auto}
+  .flow .arrow{width:auto;height:26px;transform:rotate(90deg)}
+}
+.eng-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:1000px){.eng-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.eng-grid{grid-template-columns:1fr}}
+.gcard{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:18px 17px;display:flex;flex-direction:column}
+.gcard .gtop{display:flex;align-items:center;gap:11px}
+.gcard .gi{width:40px;height:40px;border-radius:10px;background:rgba(232,32,42,.16);color:var(--red-2);display:grid;place-items:center;flex:0 0 auto}
+.gcard .gi svg{width:22px;height:22px}
+.gcard .gname{font-family:"Anton";font-size:18px;line-height:1;color:#fff}
+.gcard .gplan{font-size:9.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-top:6px;display:inline-block}
+.gcard .gplan.both{color:#cdd6cf;background:rgba(255,255,255,.09)}
+.gcard .gplan.full{color:#fff;background:var(--red)}
+.gcard .prob{font-size:13px;color:#b7b0b4;margin:13px 0 0;display:flex;gap:8px}
+.gcard .prob .x{color:#ff7a82;font-weight:800;flex:0 0 auto}
+.gcard .sol{font-size:13.5px;color:#eef0ee;margin:9px 0 0;display:flex;gap:8px;font-weight:600}
+.gcard .sol svg{width:17px;height:17px;color:#39d07e;flex:0 0 auto;margin-top:2px}
+.gcard .groles{margin-top:13px;padding-top:12px;border-top:1px solid rgba(255,255,255,.1)}
+.gcard .groles .role{background:rgba(255,255,255,.08)}
+.gcard .groles .role.coach{color:#ff8a90} .gcard .groles .role.coach::before{background:#ff8a90}
+.gcard .groles .role.parent{color:#8fb6e6} .gcard .groles .role.parent::before{background:#8fb6e6}
+.gcard .groles .role.mom{color:#e8b061} .gcard .groles .role.mom::before{background:#e8b061}
+
+/* ===== role recap ===== */
+.recap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:880px){.recap{grid-template-columns:1fr}}
+.rcard{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:24px 22px;box-shadow:var(--shadow);border-top:4px solid}
+.rcard.coach{border-top-color:var(--coach)}
+.rcard.parent{border-top-color:var(--parent)}
+.rcard.mom{border-top-color:var(--mom)}
+.rcard .rhead{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.rcard .rhic{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto}
+.rcard .rhic svg{width:24px;height:24px}
+.rcard.coach .rhic{background:var(--coach-bg);color:var(--coach)}
+.rcard.parent .rhic{background:var(--parent-bg);color:var(--parent)}
+.rcard.mom .rhic{background:var(--mom-bg);color:var(--mom)}
+.rcard .rt{font-family:"Anton";font-size:21px;line-height:1}
+.rcard.coach .rt{color:var(--coach)} .rcard.parent .rt{color:var(--parent)} .rcard.mom .rt{color:var(--mom)}
+.rcard .rsub{font-size:12.5px;color:var(--muted-2);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.rcard ul{list-style:none;margin:16px 0 0;padding:0}
+.rcard li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;font-size:14.5px;border-top:1px solid var(--line)}
+.rcard li:first-child{border-top:none}
+.rcard li svg{width:18px;height:18px;flex:0 0 auto;margin-top:2px}
+.rcard.coach li svg{color:var(--coach)} .rcard.parent li svg{color:var(--parent)} .rcard.mom li svg{color:var(--mom)}
+
+/* footer ribbon */
+.ribbon{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--red);color:#fff;text-align:center;font-size:12px;font-weight:700;padding:8px 14px;letter-spacing:.02em}
+.ribbon b{font-weight:800}
+footer.ft{padding:40px 0 28px;border-top:1px solid var(--line);text-align:center;color:var(--muted-2);font-size:13px}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- ICON SPRITE -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<g id="i-horse"><path fill="currentColor" d="M5 21c0-6 4-10 9-10l5-4-1 4 2 1-3 2c1 4-2 8-7 8z"/></g>
+<g id="i-coach" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3.2"/><path d="M5 21a7 7 0 0 1 14 0"/><path d="M16 3l3-1-1 3"/></g>
+<g id="i-parent" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/><path d="M2.5 20a5.5 5.5 0 0 1 11 0M14.5 20a4.5 4.5 0 0 1 7 0"/></g>
+<g id="i-mom" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l-1 4h-4z"/><rect x="5" y="7" width="14" height="14" rx="2"/><path d="M9 12h6M9 16h4"/></g>
+<g id="i-home" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/><path d="M10 20v-6h4v6"/></g>
+<g id="i-teams" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="8" r="2.6"/><circle cx="16.5" cy="8" r="2.6"/><path d="M3 19a4.5 4.5 0 0 1 9 0M12 19a4.5 4.5 0 0 1 9 0"/></g>
+<g id="i-register" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3.5h6V6H9z"/><path d="M8.5 13l2.2 2.2L16 10"/></g>
+<g id="i-calendar" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></g>
+<g id="i-trophy" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v4a5 5 0 0 1-10 0z"/><path d="M7 5H4.5a2.5 2.5 0 0 0 3 3M17 5h2.5a2.5 2.5 0 0 1-3 3M9 19h6M10 15.5V19M14 15.5V19"/></g>
+<g id="i-mail" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></g>
+<g id="i-tag" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7l9 9-7 7-9-9z"/><circle cx="8" cy="8" r="1.4"/></g>
+<g id="i-heart" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.7-7-10a3.7 3.7 0 0 1 7-1 3.7 3.7 0 0 1 7 1c0 5.3-7 10-7 10z"/></g>
+<g id="i-photo" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M4 17l5-5 4 4 3-2 4 4"/></g>
+<g id="i-news" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h12v14H5a1 1 0 0 1-1-1z"/><path d="M16 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1M7 9h6M7 13h6M7 16h4"/></g>
+<g id="i-app" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/></g>
+<g id="i-form" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></g>
+<g id="i-card" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 9.5h19M6 15h4"/></g>
+<g id="i-chat" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9l-4 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></g>
+<g id="i-bell" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 19a2 2 0 0 0 4 0"/></g>
+<g id="i-dash" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></g>
+<g id="i-star" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.6 5.3 5.9.8-4.3 4.1 1 5.8L12 16.8 6.8 19.5l1-5.8L3.5 9.6l5.9-.8z"/></g>
+<g id="i-arrow" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></g>
+<g id="i-check" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></g>
+</defs></svg>
+
+<div class="stripe"></div>
+<header>
+  <div class="head-in">
+    <div class="mk"><svg><use href="#i-horse"/></svg></div>
+    <div class="brand"><div class="b1">Darkhorses</div><div class="b2">What's inside each plan</div></div>
+    <div class="head-tag">Built by Jchrono</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <span class="chip"><svg><use href="#i-dash"/></svg> The build, visualized</span>
+    <h1>See <span class="hl">everything</span> that goes into running the program.</h1>
+    <p class="sub">Two plans. Below is every page and every piece of the back office — drawn out so you can see exactly what it does, and who it makes life easier for.</p>
+
+    <div class="legend">
+      <div class="lg-card coach">
+        <div class="lic"><svg><use href="#i-coach"/></svg></div>
+        <div><div class="lt">The Coach</div><div class="ld">Wants to just coach — not run the business side.</div></div>
+      </div>
+      <div class="lg-card parent">
+        <div class="lic"><svg><use href="#i-parent"/></svg></div>
+        <div><div class="lt">The Parents</div><div class="ld">Want easy sign-up, clear info, and their kid's moments.</div></div>
+      </div>
+      <div class="lg-card mom">
+        <div class="lic"><svg><use href="#i-mom"/></svg></div>
+        <div><div class="lt">The Team Mom</div><div class="ld">The one running the ship — sign-ups, money, and 400 texts.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PLAN COMPARISON -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The two plans, side by side</span>
+      <h2>What you get at each level.</h2>
+      <p>Every box is a real page on the site. Colored tags show who it helps most.</p>
+    </div>
+
+    <div class="compare">
+      <!-- SIDELINE -->
+      <div class="plan">
+        <div class="plan-head">
+          <div class="pname">The Sideline Setup</div>
+          <div class="promise">Look like the real deal in 2 weeks — and collect sign-up money from day one.</div>
+        </div>
+        <div class="pages-h"><span>The pages</span><span class="cnt">6 pages</span></div>
+        <div class="tiles">
+          <div class="tile">
+            <div class="tic"><svg><use href="#i-home"/></svg></div>
+            <div><div class="tn"><span class="pn">01</span> Home</div><div class="td">The 3× champ banner up front with a big "Register" button.</div>
+              <div class="roles"><span class="role coach">Coach</span><span class="role parent">Parent</span></div></div>
+          </div>
+          <div class="tile">
+            <div class="tic"><svg><use href="#i-teams"/></svg></div>
+            <div><div class="tn"><span class="pn">02</span> Program / Teams</div><div class="td">Your age divisions (11U–14U) and what Division 2 means.</div>
+              <div class="roles"><span class="role parent">Parent</span><span class="role coach">Coach</span></div></div>
+          </div>
+          <div class="tile">
+            <div class="tic"><svg><use href="#i-register"/></svg></div>
+            <div><div class="tn"><span class="pn">03</span> Register</div><div class="td">One flow: player info, jersey size, waiver, and fee paid on the spot.</div>
+              <div class="roles"><span class="role parent">Parent</span><span class="role mom">Team Mom</span><span class="role coach">Coach</span></div></div>
+          </div>
+          <div class="tile">
+            <div class="tic"><svg><use href="#i-calendar"/></svg></div>
+            <div><div class="tn"><span class="pn">04</span> Schedule</div><div class="td">Games and practices in one place — you update it in seconds.</div>
+              <div class="roles"><span class="role parent">Parent</span><span class="role mom">Team Mom</span></div></div>
+          </div>
+          <div class="tile">
+            <div class="tic"><svg><use href="#i-trophy"/></svg></div>
+            <div><div class="tn"><span class="pn">05</span> About / Coaches</div><div class="td">Your story since 2020 and the wall of championships.</div>
+              <div class="roles"><span class="role coach">Coach</span><span class="role parent">Parent</span></div></div>
+          </div>
+          <div class="tile">
+            <div class="tic"><svg><use href="#i-mail"/></svg></div>
+            <div><div class="tn"><span class="pn">06</span> Contact</div><div class="td">One form that routes to you — no more DMs lost in three inboxes.</div>
+              <div class="roles"><span class="role parent">Parent</span><span class="role mom">Team Mom</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FULL ENGINE -->
+      <div class="plan feat">
+        <div class="plan-head">
+          <span class="badge">Most fit for you</span>
+          <div class="pname">The Full Program Engine</div>
+          <div class="promise">The whole operating system for a 400-kid program that funds itself.</div>
+        </div>
+        <div class="pages-h"><span>The pages</span><span class="cnt">11 pages</span></div>
+        <div class="tiles">
+          <div class="tile carry">
+            <div class="tic"><svg><use href="#i-check"/></svg></div>
+            <div><div class="tn">Everything in The Sideline Setup</div><div class="td">All 6 pages above, plus the 5 money-makers below.</div></div>
+          </div>
+          <div class="tile new">
+            <div class="tic"><svg><use href="#i-tag"/></svg></div>
+            <div><div class="tn"><span class="pn">07</span> Sponsors <span class="tag-new">NEW</span></div><div class="td">Tiered packages, a logo wall, and a "become a sponsor" form that captures leads.</div>
+              <div class="roles"><span class="role coach">Coach</span><span class="role mom">Team Mom</span></div></div>
+          </div>
+          <div class="tile new">
+            <div class="tic"><svg><use href="#i-heart"/></svg></div>
+            <div><div class="tn"><span class="pn">08</span> Donate <span class="tag-new">NEW</span></div><div class="td">One-time + recurring giving, plus a "sponsor a kid" scholarship fund.</div>
+              <div class="roles"><span class="role coach">Coach</span><span class="role parent">Parent</span></div></div>
+          </div>
+          <div class="tile new">
+            <div class="tic"><svg><use href="#i-photo"/></svg></div>
+            <div><div class="tn"><span class="pn">09</span> Photos & Highlights <span class="tag-new">NEW</span></div><div class="td">Game-day galleries and your YouTube film embedded right on the site.</div>
+              <div class="roles"><span class="role parent">Parent</span><span class="role coach">Coach</span></div></div>
+          </div>
+          <div class="tile new">
+            <div class="tic"><svg><use href="#i-news"/></svg></div>
+            <div><div class="tn"><span class="pn">10</span> News / Blog <span class="tag-new">NEW</span></div><div class="td">Championship announcements, coaching news, recruiting posts.</div>
+              <div class="roles"><span class="role coach">Coach</span><span class="role parent">Parent</span></div></div>
+          </div>
+          <div class="tile new">
+            <div class="tic"><svg><use href="#i-app"/></svg></div>
+            <div><div class="tn"><span class="pn">11</span> Parent Portal <span class="tag-new">NEW</span></div><div class="td">A private branded app for the handbook, drills, and team chat.</div>
+              <div class="roles"><span class="role parent">Parent</span><span class="role mom">Team Mom</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGINE BAND -->
+<section class="engine-band">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The part nobody sees</span>
+      <h2>The back office — the engine that does the work.</h2>
+      <p>The pages are the front. Behind them, an automated system runs the busywork so no one has to do it by hand. Here's the everyday loop:</p>
+    </div>
+
+    <!-- FLOW -->
+    <div class="flow">
+      <div class="step"><div class="si"><svg><use href="#i-form"/></svg></div><div class="sn">Family signs up</div><div class="sd">Online, in 2 minutes, from a phone.</div></div>
+      <div class="arrow"><svg><use href="#i-arrow"/></svg></div>
+      <div class="step"><div class="si"><svg><use href="#i-card"/></svg></div><div class="sn">Pays on the spot</div><div class="sd">Fee is collected instantly.</div></div>
+      <div class="arrow"><svg><use href="#i-arrow"/></svg></div>
+      <div class="step"><div class="si"><svg><use href="#i-chat"/></svg></div><div class="sn">Auto-welcome text</div><div class="sd">Sent the second they join.</div></div>
+      <div class="arrow"><svg><use href="#i-arrow"/></svg></div>
+      <div class="step"><div class="si"><svg><use href="#i-bell"/></svg></div><div class="sn">Reminders send themselves</div><div class="sd">Game-day & deadlines, every time.</div></div>
+      <div class="arrow"><svg><use href="#i-arrow"/></svg></div>
+      <div class="step"><div class="si"><svg><use href="#i-dash"/></svg></div><div class="sn">All logged in your dashboard</div><div class="sd">Who paid, sizes, contacts — one place.</div></div>
+    </div>
+
+    <!-- ENGINE CARDS -->
+    <div class="eng-grid">
+      <div class="gcard">
+        <div class="gtop"><div class="gi"><svg><use href="#i-form"/></svg></div><div><div class="gname">Online sign-ups</div><span class="gplan both">Both plans</span></div></div>
+        <p class="prob"><span class="x">✕</span> Sign-ups come by text, paper, and cash — and you chase every one.</p>
+        <p class="sol"><svg><use href="#i-check"/></svg><span>Families sign up online in two minutes. You chase no one.</span></p>
+        <div class="groles roles"><span class="role parent">Parent</span><span class="role mom">Team Mom</span></div>
+      </div>
+      <div class="gcard">
+        <div class="gtop"><div class="gi"><svg><use href="#i-card"/></svg></div><div><div class="gname">Getting paid</div><span class="gplan both">Both plans</span></div></div>
+        <p class="prob"><span class="x">✕</span> Fees and gear hit your card first — and only maybe come back.</p>
+        <p class="sol"><svg><use href="#i-check"/></svg><span>The fee is collected the second a kid signs up. It stops being your money.</span></p>
+        <div class="groles roles"><span class="role coach">Coach</span><span class="role mom">Team Mom</span></div>
+      </div>
+      <div class="gcard">
+        <div class="gtop"><div class="gi"><svg><use href="#i-chat"/></svg></div><div><div class="gname">One text to all</div><span class="gplan both">Both plans</span></div></div>
+        <p class="prob"><span class="x">✕</span> A rain delay means texting 400 parents by hand, one thumb at a time.</p>
+        <p class="sol"><svg><use href="#i-check"/></svg><span>One message reaches every family at once, in seconds.</span></p>
+        <div class="groles roles"><span class="role mom">Team Mom</span><span class="role parent">Parent</span></div>
+      </div>
+      <div class="gcard">
+        <div class="gtop"><div class="gi"><svg><use href="#i-bell"/></svg></div><div><div class="gname">Reminders</div><span class="gplan both">Both plans</span></div></div>
+        <p class="prob"><span class="x">✕</span> You have to remember to send it… or you don't, and the calls start.</p>
+        <p class="sol"><svg><use href="#i-check"/></svg><span>Game-day and deadline reminders send themselves, every time.</span></p>
+        <div class="groles roles"><span class="role parent">Parent</span><span class="role mom">Team Mom</span></div>
+      </div>
+      <div class="gcard">
+        <div class="gtop"><div class="gi"><svg><use href="#i-dash"/></svg></div><div><div class="gname">One family list</div><span class="gplan both">Both plans</span></div></div>
+        <p class="prob"><span class="x">✕</span> Who paid? What jersey size? It lives in your head and three group chats.</p>
+        <p class="sol"><svg><use href="#i-check"/></svg><span>Every family, payment, and detail sits in one organized place.</span></p>
+        <div class="groles roles"><span class="role mom">Team Mom</span><span class="role coach">Coach</span></div>
+      </div>
+      <div class="gcard">
+        <div class="gtop"><div class="gi"><svg><use href="#i-heart"/></svg></div><div><div class="gname">Donations</div><span class="gplan full">Full Engine</span></div></div>
+        <p class="prob"><span class="x">✕</span> There's no real way for people to give — so the program runs on your wallet.</p>
+        <p class="sol"><svg><use href="#i-check"/></svg><span>Anyone can donate online in a few taps. The community helps carry it.</span></p>
+        <div class="groles roles"><span class="role coach">Coach</span><span class="role parent">Parent</span></div>
+      </div>
+      <div class="gcard">
+        <div class="gtop"><div class="gi"><svg><use href="#i-tag"/></svg></div><div><div class="gname">Sponsors</div><span class="gplan full">Full Engine</span></div></div>
+        <p class="prob"><span class="x">✕</span> Sponsors are a handshake and a maybe — easy to forget, hard to grow.</p>
+        <p class="sol"><svg><use href="#i-check"/></svg><span>Businesses pick a package and pay online. Real money, on the record.</span></p>
+        <div class="groles roles"><span class="role coach">Coach</span><span class="role mom">Team Mom</span></div>
+      </div>
+      <div class="gcard">
+        <div class="gtop"><div class="gi"><svg><use href="#i-star"/></svg></div><div><div class="gname">Word of mouth</div><span class="gplan full">Full Engine</span></div></div>
+        <p class="prob"><span class="x">✕</span> New families have no quick way to tell you're the real deal.</p>
+        <p class="sol"><svg><use href="#i-check"/></svg><span>Happy parents leave reviews — so the next 100 families find you first.</span></p>
+        <div class="groles roles"><span class="role coach">Coach</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROLE RECAP -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Bottom line</span>
+      <h2>What this actually changes — for each person.</h2>
+      <p>Same system, three very different days made easier.</p>
+    </div>
+
+    <div class="recap">
+      <div class="rcard coach">
+        <div class="rhead"><div class="rhic"><svg><use href="#i-coach"/></svg></div><div><div class="rt">The Coach</div><div class="rsub">Just coach</div></div></div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Stop being the bank — fees are collected before the season starts.</li>
+          <li><svg><use href="#i-check"/></svg>The admin runs itself, so your time goes back to the field.</li>
+          <li><svg><use href="#i-check"/></svg>Film + reviews recruit the next 100 families on autopilot.</li>
+          <li><svg><use href="#i-check"/></svg>Online, you look like the 3× champion program you are.</li>
+        </ul>
+      </div>
+      <div class="rcard parent">
+        <div class="rhead"><div class="rhic"><svg><use href="#i-parent"/></svg></div><div><div class="rt">The Parents</div><div class="rsub">Easy & informed</div></div></div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Sign up and pay in two minutes, right from a phone.</li>
+          <li><svg><use href="#i-check"/></svg>One home for the schedule, news, and their kid's photos.</li>
+          <li><svg><use href="#i-check"/></svg>Never miss a rain delay or deadline — reminders come to them.</li>
+          <li><svg><use href="#i-check"/></svg>A private team app instead of five different group chats.</li>
+        </ul>
+      </div>
+      <div class="rcard mom">
+        <div class="rhead"><div class="rhic"><svg><use href="#i-mom"/></svg></div><div><div class="rt">The Team Mom</div><div class="rsub">Running the ship</div></div></div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>No more chasing cash, sizes, or waivers — captured at sign-up.</li>
+          <li><svg><use href="#i-check"/></svg>Text all 400 families in one tap, not 400.</li>
+          <li><svg><use href="#i-check"/></svg>Every payment, roster, and contact in one dashboard.</li>
+          <li><svg><use href="#i-check"/></svg>Update the schedule once — everyone sees it instantly.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">NC Elite Darkhorses · Raleigh, NC — a Jchrono build overview. Placeholder examples; final pages &amp; data set before launch.</div>
+</footer>
+
+<div class="ribbon"><b>For the team behind the program</b> — a visual map of what each plan builds.</div>
+
+</body>
+</html>
